@@ -3,7 +3,7 @@ import { DemoComponent } from './demo.component'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { Angular2ImageGalleryModule } from 'angular2-image-gallery'
+import { Angular2ImageGalleryModule } from '@eurega/gallery';
 import { HttpClientModule } from '@angular/common/http'
 import { Ng5SliderModule } from 'ng5-slider';
 
