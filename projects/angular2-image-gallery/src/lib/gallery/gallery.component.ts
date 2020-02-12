@@ -29,7 +29,8 @@ export class GalleryComponent implements OnInit, OnDestroy, OnChanges {
     @Input('metadataUri') providedMetadataUri: string = undefined
     @Input('maxRowsPerPage') rowsPerPage: number = 200
 
-    @Output() viewerChange = new EventEmitter<boolean>()
+    @Output() viewerChange = new EventEmitter<boolean>();
+    @Output() select = new EventEmitter<string>();
 
     @ViewChild('galleryContainer', { static: true }) galleryContainer: ElementRef
     @ViewChildren('imageElement') imageElements: QueryList<any>
@@ -70,6 +71,16 @@ export class GalleryComponent implements OnInit, OnDestroy, OnChanges {
         this.imageService.updateImages(this.images)
         this.imageService.updateSelectedImageIndex(this.images.indexOf(img))
         this.imageService.showImageViewer(true)
+    }
+
+    public viewClick(img: any) {
+        this.imageService.updateImages(this.images)
+        this.imageService.updateSelectedImageIndex(this.images.indexOf(img))
+        this.imageService.showImageViewer(true)
+    }
+
+    public selectClick(src: string) {
+        this.select.emit(src);
     }
 
     /**

@@ -3,15 +3,18 @@
         <div *ngFor='let imgrow of gallery | slice:rowIndex:rowIndex+rowsPerPage; let i = index'
              class="imagerow"
              [style.margin-bottom.px]="calcImageMargin()">
-            <img #imageElement
-                 *ngFor='let img of imgrow; let j = index'
-                 class="thumbnail"
-                 [style.width.px]="img['width']"
-                 [style.height.px]="img['height']"
-                 (click)="openImageViewer(img)"
-                 [src]="img['srcAfterFocus']"
-                 [style.background]="img.dominantColor"
-                 [style.margin-right.px]="calcImageMargin()"/>
+             <div class="img_container" *ngFor='let img of imgrow; let j = index'>
+                <img #imageElement
+                    class="thumbnail"
+                    [style.width.px]="img['width']"
+                    [style.height.px]="img['height']"
+                    (click)="openImageViewer(img)"
+                    [src]="img['srcAfterFocus']"
+                    [style.background]="img.dominantColor"
+                    [style.margin-right.px]="calcImageMargin()"/>
+                    <button class="preview" (click)="viewClick(img)" mat-fab>View</button>
+                    <button class="select" (click)="selectClick(img['srcAfterFocus'])" mat-fab color="primary">Select</button>
+            </div>
         </div>
     </div>
 

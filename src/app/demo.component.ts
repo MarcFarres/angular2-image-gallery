@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core'
 })
 export class DemoComponent implements OnInit {
 
-    flexBorderSize: number = 3
+    flexBorderSize: number = 3  
     flexImageSize: number = 7
     galleryName: string = ''
 

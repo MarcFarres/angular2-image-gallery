@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "@eurega/gallery": ["projects/angular2-image-gallery/src"],
+      "@eurega/gallery": ["dist/angular2-image-gallery"],
       "angular2-image-gallery": [
         "dist/angular2-image-gallery"
       ],
-      "@eurega/gallery/*": ["projects/angular2-image-gallery/src/*"],
+      "@eurega/gallery/*": ["dist/angular2-image-gallery/*"],
       "angular2-image-gallery/*": [
         "dist/angular2-image-gallery/*"
       ]

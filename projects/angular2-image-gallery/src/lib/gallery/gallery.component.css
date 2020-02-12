@@ -1,5 +1,25 @@
 /* Image gallery */
 
+.img_container {
+    position: relative;
+}
+
+.img_container button {
+    position: absolute;
+    bottom:0;
+    z-index:2;
+    padding:2px;
+    border: solid 1px white;
+}
+.img_container button.preview {
+    right: 15px;
+    bottom: 15px;
+}
+.img_container button.select {
+    left: 15px;
+    bottom: 15px;
+}
+
 .innerGalleryContainer {
     position: relative;
 }
@@ -15,7 +35,7 @@
     margin-right: -1px !important;
 }
 
-.galleryContainer img:hover {
+.galleryContainer .img_container:hover img {
     -webkit-filter: brightness(50%);
     filter: brightness(50%);
     transition: all ease-out 0.2s;

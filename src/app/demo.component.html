@@ -9,10 +9,11 @@
     </div>
 
     <br><br>
-
-    <gallery (viewerChange)="onViewerVisibilityChanged($event)"
-             [flexBorderSize]="flexBorderSize"
-             [flexImageSize]="flexImageSize"
-             [maxRowsPerPage]="15"
-             [galleryName]="galleryName"></gallery>
+    <div class="gallery_wrapper">
+      <gallery (viewerChange)="onViewerVisibilityChanged($event)"
+              [flexBorderSize]="flexBorderSize"
+              [flexImageSize]="flexImageSize"
+              [maxRowsPerPage]="2"
+              [galleryName]="galleryName"></gallery>
+    </div>
     <br/><br/>
